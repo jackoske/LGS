@@ -1,0 +1,62 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'whole_trainsregular';
+  src: url('../fonts/whole_trains-webfont.woff2') format('woff2'),
+       url('../fonts/whole_trains-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'sprayerzoriginal';
+  src: url('../fonts/sprayerz_demo-webfont.woff2') format('woff2'),
+       url('../fonts/sprayerz_demo-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+body {
+  font-family: 'sprayerzoriginal', sans-serif;
+  letter-spacing: 0.2em; /* Adjust this value to control spacing */
+
+}
+
+h1, h2, h3, p, a {
+  font-family: 'sprayerzoriginal', sans-serif;
+  letter-spacing: 0.2em; /* Adjust this value to control spacing */
+
+}
+
+#shop .absolute.inset-0 {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Hero section overlay */
+#hero {
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Button Hover Effect */
+.bg-red-500:hover {
+    background-color: #d9534f;
+}
+
+.logo {
+    opacity: 0;
+    scale: .5;
+    animation: fadeIn 6s forwards;
+  }
+
+  /* Keyframes for fade-in animation */
+  @keyframes fadeIn {
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+  }

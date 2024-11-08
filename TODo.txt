@@ -1,0 +1,10 @@
+make header respoonsive
+
+change the landing imag eto a vdieo
+
+Rename collections to vdieo
+
+add contact page
+
+create bandcamp section
+

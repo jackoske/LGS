@@ -1,0 +1,40 @@
+<header class="p-4 shadow-md bg-white tracking-wide relative z-50">
+  <div class="w-full max-w-7xl mx-auto flex justify-between items-center">
+    <!-- Logo -->
+    <a href="#" class="font-bold text-4xl logo">
+      <img src="{{ url_for('static', filename='images/LGS-11-8-2024 (3).png') }}" alt="Looney Goons Logo"
+        class="w-auto h-12 sm:h-16 md:h-20 lg:h-24">
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex gap-8">
+      <a href="#videos" class="hover:underline text-gray-600 ">Our Videos</a>
+      <a href="#contact" class="hover:underline text-gray-600 ">Contact Us</a>
+    </nav>
+
+    <!-- Mobile Burger Icon -->
+    <div id="toggleOpen" class="flex lg:hidden ml-auto">
+      <button>
+        <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div id="collapseMenu" class="lg:hidden fixed inset-0 bg-white z-50 p-6 hidden transition-all duration-300">
+    <button id="toggleClose" class="absolute top-4 right-4 text-black">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <nav class="flex flex-col items-center space-y-4 mt-8">
+      <a href="#videos" class="hover:text-[#007bff] text-gray-600  text-lg">Our Videos</a>
+      <a href="#contact" class="hover:text-[#007bff] text-gray-600 text-lg">Contact Us</a>
+    </nav>
+  </div>
+
+</header>

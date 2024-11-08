@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section id="hero" class="text-center bg-cover bg-center h-screen flex flex-col justify-center items-center text-white relative">
+  <iframe class="absolute inset-0 w-full h-full object-cover" src="https://www.youtube.com/embed/LyARPaCOVJY?autoplay=1&mute=1&loop=1&playlist=LyARPaCOVJY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <div class="absolute inset-0 bg-black opacity-50"></div>
+  <h1 class="text-5xl font-bold mb-4 relative z-10"></h1>
+</section>
+
+<section id="videos" class="p-4 py-20">
+  <div class="w-full max-w-7xl mx-auto">
+    <h2 class="text-4xl font-bold mb-8 text-center">Our Videos</h2>
+    <div class="flex flex-wrap gap-4 justify-center">
+      {% for collection in collections %}
+      <a href="{{ collection.url }}" class="w-full max-w-sm flex flex-col gap-4">
+        <div class="h-64 bg-cover bg-center rounded-lg overflow-hidden shadow-lg relative" style="background-image:url('{{ collection.image }}')">
+          <i class="bi bi-arrow-up-right absolute top-4 right-4 bg-black text-white p-2 rounded-full"></i>
+        </div>
+        <h3 class="text-2xl font-semibold">{{ collection.name }}</h3>
+        <p>{{ collection.description }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="shop" class="p-4 py-20 relative overflow-hidden text-center">
+  <!-- Overlay for the Title -->
+  <div class="absolute inset-0 bg-black opacity-40 z-0"></div>
+  
+  <!-- Title -->
+  <h2 class="text-4xl font-bold mb-10 text-white relative z-10">Support Us</h2>
+  
+  <!-- Background Image -->
+  <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('https://f4.bcbits.com/img/0037298721_100.png'); background-attachment: fixed;"></div>
+  
+  <div class="relative p-12 md:p-24 pt-0 flex items-center justify-center z-10">
+    <div class="text-center max-w-4xl mx-auto">
+      <a href="https://koukou5d.bandcamp.com/music" 
+         class="inline-block px-10 py-3 text-white font-semibold text-lg rounded-full transition-all duration-500 bg-gradient-to-r from-gray-900 to-gray-600 hover:from-gray-700 hover:to-gray-500 shadow-lg hover:shadow-xl">
+        Go to shop
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section id="crew" class="p-8 bg-gray-100 text-center">
+  <div class="w-full max-w-7xl mx-auto">
+    <h2 class="text-4xl font-bold mb-10 text-gray-800">Meet the Crew</h2>
+    
+    <div class="grid gap-8 md:grid-cols-3">
+      <!-- Artist 1: PNF -->
+      <div class="bg-white rounded-lg shadow-lg p-6">
+        <h3 class="text-2xl font-semibold mb-4">PNF</h3>
+        <p class="text-gray-600 mb-6">Electronic music artist with a unique sound that resonates across different genres.</p>
+        <iframe src="https://open.spotify.com/embed/artist/0uyiAwm4tx00dCVwUtSmG3" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+
+      <!-- Artist 2: Koukou5D -->
+      <div class="bg-white rounded-lg shadow-lg p-6">
+        <h3 class="text-2xl font-semibold mb-4">Koukou5D</h3>
+        <p class="text-gray-600 mb-6">Innovative artist blending various styles to create an eclectic listening experience.</p>
+        <iframe src="https://open.spotify.com/embed/artist/308SenrGjMkuf5cB50I6ft" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+
+      <!-- Artist 3: JD -->
+      <div class="bg-white rounded-lg shadow-lg p-6">
+        <h3 class="text-2xl font-semibold mb-4">JD</h3>
+        <p class="text-gray-600 mb-6">Known for captivating beats and immersive soundscapes that draw listeners in.</p>
+        <iframe src="https://open.spotify.com/embed/artist/7qfbLpYiAB9rFe9MSGN0Ch" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="contact" class="p-4 py-20">
+  <div class="mx-auto max-w-7xl w-full">
+    <div class="grid lg:grid-cols-2 grid-cols-1 items-center">
+      <!-- Contact Info Section -->
+
+
+      <!-- Contact Information with Email Link -->
+      <div class="p-5 lg:p-11 lg:rounded-r-2xl rounded-2xl text-center lg:text-left">
+        <h2 class="font-manrope text-4xl font-semibold leading-10 mb-6">Get in Touch</h2>
+        <p class="text-lg text-gray-700 mb-6">
+          We’d love to hear from you! For inquiries, collaborations, or questions, reach out to us via email.
+        </p>
+        <a href="mailto:your-email@example.com" class="inline-block text-2xl font-semibold text-blue-600 hover:text-blue-800 underline transition duration-300">
+          your-email@example.com
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section id="contact" class="p-4 py-20">
+  <div class="mx-auto max-w-7xl w-full">
+    <div class="grid lg:grid-cols-2 grid-cols-1 items-center">
+      <div class="lg:mb-0 mb-10">
+        <div class="group w-full h-full">
+          <div class="relative h-full">
+            <img src="https://f4.bcbits.com/img/a1477004299_16.jpg" alt="ContactUs tailwind section" class="w-full h-full lg:rounded-l-2xl rounded-2xl bg-blend-multiply" />
+            <h1 class="font-manrope text-black text-4xl font-bold leading-10 absolute top-11 left-11">Contact us</h1>
+            <div class="absolute bottom-0 w-full lg:p-11 p-5">
+              <div class="rounded-lg p-6 block">
+                <a href="#" class="flex items-center">
+                  <i class="bi bi-geo-alt"></i>
+                  <h5 class="underline text-black text-base font-normal leading-6 ml-5">Berlin, Germany</h5>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-5 lg:p-11 lg:rounded-r-2xl rounded-2xl">
+        <h2 class="font-manrope text-4xl font-semibold leading-10 mb-11">Send Us A Message</h2>
+        <input type="text" class="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 border border-black focus:outline-none p-4 mb-10" placeholder="Name">
+        <input type="text" class="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 border border-black focus:outline-none p-4 mb-10" placeholder="Email">
+        <input type="text" class="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 border border-black focus:outline-none p-4 mb-10" placeholder="Phone">
+        <textarea class="max-h-[200px] w-full text-gray-600 placeholder-gray-400 bg-transparent text-lg shadow-sm font-normal leading-7 border border-black focus:outline-none p-4 mb-10" placeholder="Message"></textarea>
+        <button class="w-full h-12 text-white text-base font-semibold leading-6 rounded-full transition-all duration-500 bg-black hover:bg-gray-700 shadow-sm">Send</button>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+{% endblock %}
